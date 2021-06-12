@@ -1,0 +1,506 @@
+@font-face {
+  font-family: avenir;
+  src: url("../assets/fonts/avenir-roman-opentype_bigfontsite.com.otf");
+}
+
+// @font-face {
+//   font-family: moderne;
+//   src: url('../assets/fonts/Moderne/Regular.ttf');
+// }
+
+@font-face {
+  font-family: "minerva-modern";
+  src: url("https://use.typekit.net/af/0de237/000000000000000077359a4c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/0de237/000000000000000077359a4c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/0de237/000000000000000077359a4c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: bely;
+  src: url("../assets/fonts/Bely\ Display\ W00\ Regular.ttf");
+}
+// font classes
+.minerva {
+  font-family: "minerva-modern";
+}
+
+.playfairy {
+  font-family: "Playfair Display", serif;
+}
+
+.bely {
+  font-family: bely, sans-serif;
+}
+
+.avenir {
+  font-family: "avenir";
+}
+
+// .moderne {
+//   font-family: moderne !important;
+// }
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.on-focus {
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.opacity-09 {
+  opacity: 0.9;
+}
+
+// colors
+
+$primary-color: #553160;
+$secondary-color: #f86cb5;
+$third-color: #fae2e3;
+$fourth-color: #faf7f0;
+$yellow: #fecc2f;
+
+// background
+.bg-primary {
+  background-color: $primary-color !important;
+}
+// color classes
+
+.primary-color {
+  color: $primary-color;
+}
+
+.secondary-color {
+  color: $secondary-color !important;
+}
+
+.third-color {
+  color: $third-color;
+}
+
+.fourth-color {
+  color: $fourth-color;
+}
+
+// white-text
+.white-text {
+  color: #faf5e6;
+}
+
+.white-text-2 {
+  color: #fffae9;
+}
+
+// margins
+
+.mt-10 {
+  margin-top: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+.ml-50 {
+  margin-left: 50px;
+}
+
+@media only screen and (min-width: 425px) {
+  // margins
+  .ml-sm-30 {
+    margin-left: 30px;
+  }
+}
+// buttons
+
+.my-btn {
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 2px solid $secondary-color;
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary-color;
+  }
+  img {
+    height: 30px;
+    margin-left: 10px;
+  }
+}
+
+//   btn
+.nav-btn {
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 2px 8px;
+  border: 2px solid $secondary-color;
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.form-btn {
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 4px 8px;
+  border: 2px solid $secondary-color;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: $secondary-color;
+  }
+}
+// font sizes
+
+// heading - 1
+@mixin heading-1() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 85px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 55px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 45px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 35px;
+  }
+}
+
+// Heading -2
+@mixin heading-2() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 60px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 50px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 40px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 30px;
+  }
+}
+
+// Heading -3
+@mixin heading-3() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 45px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 35px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 30px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 25px;
+  }
+}
+
+// Heading -4
+@mixin heading-4() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 70px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 55px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 45px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 35px;
+  }
+}
+
+// Heading -5
+@mixin heading-5() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 40px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 32px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 26px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 20px;
+  }
+}
+
+// services heading
+@mixin heading-6() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 40px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 30px;
+  }
+}
+
+// Subtitles
+
+@mixin subtitle-1() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 18px;
+  }
+}
+
+@mixin subtitle-2() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+//  paragraph
+
+// para - 1
+@mixin para-1() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 45px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 32px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 28px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 24px;
+  }
+}
+
+// para -2
+@mixin para-2() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 40px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 33px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    font-size: 26px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 20px;
+  }
+}
+
+// para 3
+@mixin para-3() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 720px) {
+    font-size: 18px;
+  }
+}
+// para 4
+@mixin para-4() {
+  @media only screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 720px) {
+    font-size: 24px;
+  }
+}
+
+// functions
+
+// position relative center
+
+@mixin position-h-center-r {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Classes
+@mixin sticky-image-1() {
+  @media only screen and (min-width: 1200px) {
+    width: 490px;
+  }
+  @media only screen and (max-width: 1200px) {
+     width: 490px;
+  }
+
+  @media only screen and (max-width: 720px) {
+     width: 390px;
+  }
+
+  @media only screen and (max-width: 450px) {
+     width: 390px;
+  }
+}
+@mixin footer-image() {
+  @media only screen and (min-width: 1200px) {
+    width: 572px;
+  }
+  @media only screen and (max-width: 1200px) {
+     width: 572px;
+  }
+
+  @media only screen and (max-width: 720px) {
+     width: 500px;
+  }
+
+  @media only screen and (max-width: 450px) {
+     width: 410px;
+  }
+}
+
+// headings
+.heading-1 {
+  @include heading-1;
+  color: $primary-color;
+}
+
+.heading-2 {
+  @include heading-2;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.heading-3 {
+  @include heading-3;
+  color: $primary-color;
+  font-weight: bold;
+  font-family: "Playfair Display";
+}
+
+.heading-4 {
+  @include heading-4;
+  color: $primary-color;
+
+  font-weight: bold;
+}
+
+.heading-5 {
+  @include heading-5;
+  font-weight: 400;
+}
+
+.services-heading {
+  @include heading-6;
+  color: $primary-color;
+}
+
+// Subtitle
+
+.subtitle-1 {
+  color: $secondary-color;
+  @include subtitle-1;
+  font-weight: normal;
+}
+
+.subtitle-2 {
+  @include subtitle-2;
+  font-weight: 100;
+}
+
+// paragraphs
+
+.para-1 {
+  @include para-1;
+  color: $primary-color;
+
+  letter-spacing: -0.23px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.para-2 {
+  @include para-2;
+  color: $third-color;
+  line-height: 53%;
+  letter-spacing: 0.64px;
+
+  font-weight: normal;
+}
+
+.para-3 {
+  @include para-3;
+}
+.para-4 {
+  @include para-4;
+  color: $primary-color;
+  font-weight: normal;
+  font-family: "Playfair Display";
+}
+
+.font-20 {
+  font-size: 20px;
+}
+// text center on small screen
+
+@media screen and (max-width: 767px) {
+  .text-center-on-small {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .my-btn {
+    padding: 5px 10px;
+  }
+}

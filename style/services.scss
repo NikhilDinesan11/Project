@@ -1,0 +1,191 @@
+@import "./data";
+
+@media screen and (max-width: 425px) {
+  .margin-sm {
+    margin: 0 20px;
+  }
+}
+
+.footerimage {
+  @include footer-image;
+}
+
+// Swiper setting
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+
+  padding: 50px 0;
+  .swiper-slide-1 {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    h2 {
+      color: #66456f;
+      font-family: "Playfair Display";
+      font-weight: 900;
+      font-size: 32px;
+      max-width: 200px;
+      text-align: left;
+    }
+    p {
+      font-size: 16px;
+      text-align: left;
+      color: #62466b;
+      margin-top: 30px;
+    }
+    a {
+      text-align: left;
+      color: #f86cb5;
+      p {
+        color: #f86cb5;
+      }
+      img {
+        position: relative;
+        top: 5px;
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.swiper-slide {
+  z-index: 100;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border: 1px solid #707070;
+  width: 222px;
+  height: 300px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  &-1 {
+    padding-left: 0 !important;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.first-slide-b {
+  background-color: #fae2e3;
+}
+
+.second-slide-b {
+  background-color: $fourth-color;
+
+  .img-container {
+    img {
+      max-width: 300px !important;
+    }
+  }
+}
+
+.fourth-slide-b {
+  background-color: $fourth-color;
+  .casestudy__text-head {
+    p {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.fifth-slide-text-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  span {
+    margin-right: 20px;
+  }
+}
+
+.fifth-slide {
+  p {
+    span {
+      margin-right: 20px;
+    }
+  }
+}
+
+.services-heading {
+  font-weight: bold;
+}
+//     Swiper end
+body {
+  background-color: white !important;
+  width: 100%;
+  overflow-x: hidden !important;
+  .outer__navbar {
+    background-color: #faf7f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar,
+  .hmain {
+    background-color: #faf7f0;
+    .hmain__text__service {
+      max-width: 800px;
+    }
+  }
+
+  .hmain {
+    max-height: 50vh !important;
+  }
+
+  //   case Study
+  .casestudy {
+    .swiper-pagination-bullet {
+      background-color: #fae2e3;
+      border: 2px solid #62466b;
+    }
+    .swiper-pagination-bullet-active {
+      color: #fff;
+      background: #62466b;
+    }
+    padding: 80px 0px;
+
+    .img-container {
+      margin-top: 80px;
+
+      img {
+        max-width: 200px;
+        max-height: 220px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &__text-head {
+      p {
+        font-family: "avenir";
+        color: #553160;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}
